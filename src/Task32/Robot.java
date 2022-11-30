@@ -4,7 +4,6 @@ public class Robot {
     int x ;
     int y ;
     Direction direction = Direction.UP;
-
     public Direction getDirection() {
         return direction;
     }

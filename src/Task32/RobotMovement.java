@@ -8,8 +8,6 @@ public class RobotMovement {
         moveRobot(robot, -10, 20);
         System.out.println(robot.getX());
         System.out.println(robot.getY());
-
-
     }
 
     public static void moveRobot(Robot robot, int toX, int toY) {

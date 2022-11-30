@@ -37,7 +37,6 @@ public final class ComplexNumber {
         if (o == null || getClass() != o.getClass()) {
             return false;
         }
-
         // 3
         ComplexNumber complexNumber = (ComplexNumber) o;
         return re == complexNumber.getRe() &&
