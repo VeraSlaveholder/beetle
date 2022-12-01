@@ -23,10 +23,10 @@ public class Roles {
         for (int i = 0; i < roles.length; i++) {
             result.append(roles[i]).append(":").append("\n");
             for (int j = 0; j < textLines.length; j++) {
-                String string1=textLines[j];
-                if (string1.startsWith(roles[i]+":")) {
-                    String string2=string1.replaceFirst(roles[i]+":",j+1+")");
-                    result.append(string2).append("\n");
+                String role=textLines[j];
+                if (role.startsWith(roles[i]+":")) {
+                    String phrase=role.replaceFirst(roles[i]+":",j+1+")");
+                    result.append(phrase).append("\n");
                 }
 
             }result.append("\n");

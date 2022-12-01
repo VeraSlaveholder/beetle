@@ -6,7 +6,7 @@ public class Factorial {
 
     }
     public static BigInteger factorial(int value) {
-        BigInteger factorials = new BigInteger("1");
+        BigInteger factorials = BigInteger.ONE;
         for(int i=1;i<=value;i++){
             factorials=factorials.multiply(BigInteger.valueOf(i));
         }
