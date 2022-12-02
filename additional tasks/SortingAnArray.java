@@ -8,13 +8,13 @@ public class SortingAnArray {
 
     public static void printOddNumbers(int[] arr) {
         boolean flag = true;
-        for (int x = 0; x < arr.length; x++) {
-            if (arr[x] % 2 != 0) {
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] % 2 != 0) {
                 if (flag) {
-                    System.out.print(arr[x]);
+                    System.out.print(arr[i]);
                     flag = false;
                 } else {
-                    System.out.print(", " + arr[x]);
+                    System.out.print(", " + arr[i]);
                 }
             }
         }
