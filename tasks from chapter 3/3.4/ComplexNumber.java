@@ -28,16 +28,14 @@ public final class ComplexNumber {
 
     @Override
     public boolean equals(Object o) {
-        // 1
         if (this == o) {
             return true;
         }
 
-        // 2
         if (o == null || getClass() != o.getClass()) {
             return false;
         }
-        // 3
+
         ComplexNumber complexNumber = (ComplexNumber) o;
         return re == complexNumber.getRe() &&
                 im == complexNumber.getIm();
@@ -45,7 +43,10 @@ public final class ComplexNumber {
 
     @Override
     public int hashCode() {
-        return Objects.hash(re, im);
-
+        //return Objects.hash(re, im);
+        long reBits = Double.doubleToLongBits(re);
+        long miBits = Double.doubleToLongBits(im);
+        miBits += miBits << 5;  // miBits * 33  http://www.cse.yorku.ca/~oz/hash.html
+        return (int)(reBits ^ (reBits >>> 32) ^ miBits ^ (miBits >>> 32));
     }
 }
