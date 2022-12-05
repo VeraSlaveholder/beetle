@@ -3,7 +3,7 @@ package Task35;
 import java.util.Arrays;
 
 public class AsciiCharSequence implements CharSequence{
-    byte[] a;
+    private byte[] a;
     public AsciiCharSequence(byte[] a){
         this.a=a;
     }
