@@ -3,8 +3,7 @@ package additionally;
 public class DynamicArray<T> {
 
     private T[] array;
-    int size;
-
+    private int size;
 
     public DynamicArray() {
         T[] arr = (T[]) new Object[10];

@@ -16,9 +16,10 @@ public class Salary {
 
     public static Map<String, Long> getSalesMap(Reader reader) {
         Map<String, Long> map = new HashMap<>();
+        StringBuilder stringBuilder;
         try (Scanner scanner = new Scanner(reader)) {
             while (scanner.hasNextLine()) {
-                StringBuilder stringBuilder = new StringBuilder(scanner.nextLine());
+                stringBuilder = new StringBuilder(scanner.nextLine());
                 String line = stringBuilder.substring(0, stringBuilder.indexOf(" "));
                 Long number = new Scanner(stringBuilder.substring(stringBuilder.indexOf(" ") + 1)).nextLong();
                 System.out.println(line);
@@ -26,7 +27,7 @@ public class Salary {
                 if (!map.containsKey(line)) {
                     map.put(line, number);
                 } else {
-                    map.replace(line, map.get(line), number);
+                    map.replace(line, map.get(line), number+map.get(line));
                 }
             }
         } catch (Exception e) {
