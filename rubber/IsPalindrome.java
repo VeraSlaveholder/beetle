@@ -1,4 +1,4 @@
-package Task23;
+package JavaStepic.task1.Task23;
 
 public class IsPalindrome {
     public static boolean isPalindrome(String text) {
