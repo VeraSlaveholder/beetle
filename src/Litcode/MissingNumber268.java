@@ -13,11 +13,12 @@ public class MissingNumber268 {
 
     public static int missingNumber(int[] nums) {
         Arrays.sort(nums);
-        int left=0,right=nums.length;
-        while (left<right){
-          int middle=(left+right)/2;
-           if (nums[middle]>middle) right=middle;
-           else left=middle+1;
-        }return left;
+        int left = 0, right = nums.length;
+        while (left < right) {
+            int middle = (left + right) / 2;
+            if (nums[middle] > middle) right = middle;
+            else left = middle + 1;
+        }
+        return left;
     }
 }

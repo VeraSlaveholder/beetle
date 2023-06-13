@@ -11,13 +11,13 @@ public class ReverseInteger7 {
         while (x != 0) {
             pop = x % 10;
             x = x / 10;
-            if(result>Integer.MAX_VALUE/10||(result==Integer.MAX_VALUE/10 && pop>7)){
+            if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && pop > 7)) {
                 return 0;
             }
-            if(result<Integer.MIN_VALUE/10||(result==Integer.MIN_VALUE/10 && pop<-8)){
+            if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && pop < -8)) {
                 return 0;
             }
-            result=result*10+pop;
+            result = result * 10 + pop;
         }
         return result;
     }
